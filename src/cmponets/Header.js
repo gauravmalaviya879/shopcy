@@ -10,7 +10,7 @@ const Header = () => {
     <div>
       <Navbar expand="lg" className="bg-dark text-white">
         <Container>
-          <Navbar.Brand href="#home" className="text-white">Shopcy</Navbar.Brand>
+          <Navbar.Brand href="#home" className="text-white">Shopcy-dev</Navbar.Brand>
           <Navbar.Toggle className="text-white" aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
