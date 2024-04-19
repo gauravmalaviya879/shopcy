@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext, useState } from "react";
+import Header from "./cmponets/Header";
+import { Routes, Route } from "react-router-dom"
+import Cart from "./cmponets/Cart";
+import Home from "./cmponets/Home";
+import './App.css'
+import HookstoIntro from "./cmponets/HookstoIntro";
+import Other from "./cmponets/Other";
 
-function App() {
+
+// create context -detaails use usecontext hook (provider )
+export const DataContext = createContext()
+const App = () => {
+  const [user, setUser] = useState("gaurav");
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <DataContext.Provider value={user}>
+      <HookstoIntro/>
+      <Other/>
+      </DataContext.Provider> */}
+
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
